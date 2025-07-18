@@ -14,6 +14,7 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,7 +91,19 @@ a.secondary {
   border-color: var(--gray-alpha-200);
   min-width: 158px;
 }
-
+.header {
+  background-color: rgb(93, 150, 170);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  height: 150px;
+}
+.title {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 300%;
+  color: #f2f2f2;
+}
 .footer {
   grid-row-start: 3;
   display: flex;

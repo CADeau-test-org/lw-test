@@ -3,6 +3,19 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
+    <>
+    <header className={styles.header}>
+      <Image
+      src="/logo.png"
+      alt="banner image"
+      width={270}
+      height={111}
+      priority
+      />
+      <text className={styles.title}>
+        Animal Rescue
+      </text>
+    </header>
     <div className={styles.page}>
       <main className={styles.main}>
         <Image
@@ -91,5 +104,6 @@ export default function Home() {
         </a>
       </footer>
     </div>
+    </>
   );
 }
