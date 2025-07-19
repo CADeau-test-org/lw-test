@@ -8,13 +8,16 @@ export default function Home() {
       <Image
       src="/logo.png"
       alt="banner image"
-      width={270}
-      height={111}
+      width={600}
+      height={300}
       priority
       />
-      <text className={styles.title}>
-        Animal Rescue
-      </text>
+      <h1 className={styles.title}>Animal Rescue</h1>
+      <nav className={styles.nav}>
+        <a href="#" className={styles.link}>Adopt</a>
+        <a href="#" className={styles.link}>About Us</a>
+        <a href="#" className={styles.link}>Contact Us</a>
+      </nav>
     </header>
     <div className={styles.page}>
       <main className={styles.main}>
@@ -28,7 +31,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>src/app/page.tsx</code>.
+            A lifetime friend <code>waiting for you</code>.
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
