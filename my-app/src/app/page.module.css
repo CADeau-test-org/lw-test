@@ -16,6 +16,62 @@
   font-family: var(--font-geist-sans);
   width: 100%;
 }
+.album {
+  padding: 25px;
+  gap: 32px;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;        /* Allows images to wrap instead of stretch */
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 60px;
+  margin-top: 75px;
+  margin-left: 25px; 
+  margin-right: 25px;
+  padding: 10px;
+}
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery {
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+.imagehov {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: fit-content;    /* shrink-wraps width */
+  height: fit-content; /*IMPORTANT for it to fit the pic*/
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  height: 20%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imagehov:hover .caption {
+  opacity: 1;
+}
 
 @media (prefers-color-scheme: dark) {
   .page {
@@ -194,7 +250,7 @@ a.secondary {
 }
 
 @media (prefers-color-scheme: dark) {
-  .logo {
+  .gallery {
     filter: invert();
   }
 }
