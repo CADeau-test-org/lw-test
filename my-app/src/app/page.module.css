@@ -30,6 +30,8 @@
   margin-left: 25px; 
   margin-right: 25px;
   padding: 10px;
+
+  animation: fadeSlideUp 1s ease-out forwards;
 }
 @keyframes fadeSlideUp {
   from {
@@ -42,9 +44,6 @@
   }
 }
 
-.gallery {
-  animation: fadeSlideUp 1s ease-out forwards;
-}
 .imagehov {
   position: relative;
   overflow: hidden;

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import pets from "./pet_list.json";
 
+/* cmd shift L */
 export default function Home() {
   return (
     <>
@@ -19,6 +21,28 @@ export default function Home() {
         <a href="#" className={styles.link}>Contact Us</a>
       </nav>
     </header>
+    <div className={styles.album}>
+      <main className={styles.gallery}>
+        {pets.map((image, index) => ( /* idea: to iterate over list of animals, 
+        the curly braces allows to write Javascript inside html
+        why javascript? bc we want to make it interactive and dynamic
+        .map is a function that acts like a for loop, returns a new array of results
+        image is the object and index is the position in the array
+         */
+          <div key={index} className={styles.imagehov}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={400}
+              height={image.height}
+              priority /*ensures image is preloaded for faster performance */
+            />
+            <div className={styles.caption}>{image.caption}</div>
+          </div>
+        ))}
+      </main>
+    </div>
+    {/*
     <div className={styles.album}>
       <main className={styles.gallery}>
         <div className={styles.imagehov}>
@@ -84,6 +108,7 @@ export default function Home() {
 
       </main>
     </div>
+    */}
     
     <div className={styles.page}>
       <main className={styles.main}>

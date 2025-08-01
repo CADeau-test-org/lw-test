@@ -1,0 +1,8 @@
+[
+    { "src": "/Mike.jpg", "alt": "dog 1 pic", "caption": "Mike", "height": 530 },
+    { "src": "/jerry.jpg", "alt": "cat 1 pic", "caption": "Jerry", "height": 450 },
+    { "src": "/tom.jpg", "alt": "dog 3 pic", "caption": "Tom", "height": 500 },
+    { "src": "/mimi.jpg", "alt": "cat 2 pic", "caption": "Mimi", "height": 400 },
+    { "src": "/lili.jpg", "alt": "cat 3 pic", "caption": "Lili", "height": 500 },
+    { "src": "/zac.jpg", "alt": "dog 2 pic", "caption": "Zac", "height": 560 }
+]
