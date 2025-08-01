@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import {myAnimal, animals} from "./animals.ts"
+import {myAnimal} from "./animals";
+import pets from "../../public/pets.json";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
     <div className={styles.album}>
       <main className={styles.gallery}>
         {
-          animals.map((pet) => (
+          pets.map((pet: myAnimal) => (
         <div className={styles.imagehov}>
           <Image
             src={pet.src}

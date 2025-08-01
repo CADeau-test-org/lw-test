@@ -5,3 +5,11 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+module.exports = {
+  images: {
+    remotePatterns: [new URL('https://i.imgur.com/**'),
+      new URL('https://i.postimg.cc/**')
+    ]
+  }
+}
