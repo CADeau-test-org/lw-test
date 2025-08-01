@@ -25,7 +25,7 @@ export default function Home() {
       <main className={styles.gallery}>
         {
           pets.map((pet: myAnimal) => (
-        <div className={styles.imagehov}>
+        <div key={pet.id} className={styles.imagehov}>
           <Image
             src={pet.src}
             alt={pet.alt}
