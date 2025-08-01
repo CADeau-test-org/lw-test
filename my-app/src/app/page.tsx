@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import {myAnimal, animals} from "./animals.ts"
 
 export default function Home() {
   return (
@@ -21,67 +22,20 @@ export default function Home() {
     </header>
     <div className={styles.album}>
       <main className={styles.gallery}>
+        {
+          animals.map((pet) => (
         <div className={styles.imagehov}>
           <Image
-            src="/Mike.jpg"
-            alt="dog 1 pic"
-            width={400}
-            height={530}
+            src={pet.src}
+            alt={pet.alt}
+            width={pet.width}
+            height={pet.height}
             priority
           />
-          <div className={styles.caption}>Mike</div>
+          <div className={styles.caption}>{pet.name}</div>
         </div>
-        <div className={styles.imagehov}>
-          <Image
-            src="/jerry.jpg"
-            alt="cat 1 pic"
-            width={400}
-            height={450}
-            priority
-          />
-          <div className={styles.caption}>Jerry</div>
-        </div>
-        <div className={styles.imagehov}>
-          <Image
-            src="/tom.jpg"
-            alt="dog 3 pic"
-            width={400}
-            height={500}
-            priority
-          />
-          <div className={styles.caption}>Tom</div>
-        </div>
-        <div className={styles.imagehov}>
-          <Image
-            src="/mimi.jpg"
-            alt="cat 2 pic"
-            width={400}
-            height={400}
-            priority
-          />
-          <div className={styles.caption}>Mimi</div>
-        </div>
-        <div className={styles.imagehov}>
-          <Image
-            src="/lili.jpg"
-            alt="cat 3 pic"
-            width={400}
-            height={500}
-            priority
-          />
-          <div className={styles.caption}>Lili</div>
-        </div>
-        <div className={styles.imagehov}>
-          <Image
-            src="/zac.jpg"
-            alt="dog 2 pic"
-            width={400}
-            height={560}
-            priority
-          />
-          <div className={styles.caption}>Zac</div>
-        </div>
-
+          )
+        )}
       </main>
     </div>
     
